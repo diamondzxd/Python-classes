@@ -1,0 +1,33 @@
+AJAX : 
+
+implemented in 4 steps.
+
+Steps 1 : Create XMLHttpRequest
+
+xhr=new XMLHttpRequest();
+
+Step 2 : Initialize the Request
+
+xhr.open('method','url');
+
+Step 3 : Send the Request
+
+xhr.send();
+
+Step 4 : Process the Result
+
+xhr.onreqadystatechange=function()
+{
+	if(xhr.readyState==4)
+	{
+		data=xhr.responseText;
+	}
+}
+
+Ready States of a Request
+
+0 : Unitialized
+1 : Initialized
+2 : Sent
+3 : Processing
+4 : Completed

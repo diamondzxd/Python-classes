@@ -1,0 +1,17 @@
+Hospital Management System
+
+
+Doctor
+	Add Doctor
+	Update Doctor
+	Delete Doctor
+	Display
+
+Patient
+
+Rooms
+
+Admission
+	1 Admit Patient
+	2 Discharge Patient
+	3 Generate Bill

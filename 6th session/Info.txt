@@ -1,0 +1,61 @@
+Object Oriented Programming in Python
+
+OOPS Features : 
+
+1. Encapsulation
+2. Data Abstraction
+3. Polymorphism
+4. Inheritance
+
+
+Class and Objects
+
+Declaration : 
+
+class <class-name>:
+	<data-members>
+	<member-functions>
+
+e.g.
+
+class Student:
+	id=1
+	name='Piyush'
+	course='Python'
+	fees=50000.0
+
+
+Note: In Python, all members are public by default.
+
+Creating an object of a class
+
+Student s=new Student;		//java
+Student s;					//C++
+
+
+s=Student()					//Python
+
+Accessing class Members
+
+print(s.id)
+print(s.name)
+print(s.course)
+print(s.fees)
+
+
+
+
+
+
+Types of Casing in Programming : 
+
+Pascal : MyClass  # class, interface, packages
+
+Camel : myClass # functions
+
+variables : small
+
+
+
+
+

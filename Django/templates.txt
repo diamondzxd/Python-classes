@@ -1,0 +1,76 @@
+Returning templates as Response
+
+templates
+	1. page3.html	#Write any code.
+
+
+
+#render(request,template,data)
+
+e.g.
+
+def Page3(request):
+	return render(request,'page3.html',None)
+
+
+#Redirecting Requests
+
+def Page4(request):
+	return redirect('/page3/')
+
+
+
+#Passing data to Django Templates
+
+Types of Data - 
+
+Integer 
+String
+List, Tuple
+Objects
+JSON Data (Dictionary)
+
+The data passed must be in Dict object
+
+--------------------------------------------------------
+
+Templates Variable Expressions or Templates Expression
+
+#Simple Variable
+
+{{name}}
+{{age}}
+
+#List
+
+{{skills.0}}		#Access like an object not an array like skills[0]
+
+#Dictionary
+
+{{address.hno}}		#Not like address['hno']
+
+
+# Using if Template Expressions
+
+def Page6(request):
+	data={'login':True}
+	return render(request,'page6.html',data)
+
+#Template Expression Dynamic
+
+{% if login %}
+
+
+
+
+
+# Django For Expression
+
+{% for iterator in iterables %}
+....
+{% endfor %}
+
+
+
+# Template Inheritance.
+

@@ -1,0 +1,18 @@
+Installing Requests
+
+pip install requests
+
+#Sending HTTP Requests
+
+import requests
+
+#Sending GET request
+
+request.get(url)	#Sends an HTTP GET request to the webserver. Returns HTTP Response Object if successful. Return error otherwise.
+
+request.post()		#Sends an HTTP POST request to the webserver.
+
+response=request.get()
+response.text
+
+https://tools.learningcontainer.com/sample-json.json

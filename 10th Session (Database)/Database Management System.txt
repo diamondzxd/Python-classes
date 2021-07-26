@@ -1,0 +1,225 @@
+Database Management System
+
+A Database Management System is a dedication application program which is used to store and process large amount of data. 
+
+The database management system (DBMS) is the software that interacts with end users, applications, and the database itself to capture and analyze the data.  
+
+
+Advantages of Database Management System
+
+1. Redundancy Control
+2. Sharing of Data
+3. Concurrency Control
+4. Backup and Restore
+
+
+
+Types of Database Management System
+
+1. Relational Database Management System   (1:1, 1:M, M:M)
+2. Hierarchical Database Management System  (1:M)
+3. Network Database Management System (M:M)
+
+
+Some Popular RDBMS
+
+1. Microsoft SQL Server
+2. Oracle
+3. MySql
+4. Postgre SQL etc.
+
+
+
+
+Mysql
+
+MySQL is free and open-source Relational Database Management System.
+
+
+Step 1 : Open XAMPP Control Panel.
+Step 2 : Start MySQL
+Step 3 : Click 'Shell'
+Step 4 : Type 'mysql -u root -p'
+Step 5 : Press Enter for password.
+
+
+
+SQL
+
+SQL is an interface to interact with a database management system.
+
+Types of SQL Commands
+
+1. Data Definition Language (DDL)
+2. Data Manipulation Language (DML)
+3. Data Control Language (DCL)
+
+Data Definition Language commands are used to create and manage database objects (E.g. Tables, Views, Stored Procedures)
+
+Commands : 
+
+1. CREATE
+2. DROP
+3. ALTER
+4. USE
+5. SHOW
+
+A. CREATE DATABASE : Creates a new Database 
+
+Syntax : 
+
+CREATE DATABASE <database-name>;
+
+e.g. 
+
+CREATE DATABASE aptech24;
+
+B. SHOW DATABASES : Display the list of Databases
+
+Syntax : 
+
+SHOW DATABASES;
+
+C. DROP DATABASE <database-name> : Deletes an existing Databse.
+
+Syntax : DROP DATABASE <database-name>;
+
+e.g. DROP DATABASE aptech24;
+
+D. USE DATABASE : Opening a Database
+
+Syntax : USE <databse-name>
+
+e.g. : USE aptech24;
+
+E. CREATE TABLE : Creating Database Tables.
+
+Syntax : 
+
+CREATE TABLE <table-name>
+(
+	<column-name> <field-type>
+	<column-name> <field-type>
+	<column-name> <field-type>
+);
+
+e.g.
+
+CREATE TABLE student
+(
+	id int,
+	name varchar(20),
+	course varchar(20),
+	fees decimal(10,2)
+);
+
+F. SHOW TABLES : Displays the list of tables.
+
+e.g.
+
+SHOW TABLES
+
+G. DESC <TABLENAME> : Describes the Table's Structure.
+
+e.g. DESC STUDENT;
+
+H. ALTER : Change the structure of a table.
+
+Syntax :
+
+ALTER TABLE <TABLE-NAME>
+[ADD <column-name> <type>]
+[DROP COLUMN <column-name>]
+[MODIFY COLUMN <column-name> <type>]
+
+
+e.g. 
+
+ALTER TABLE STUDENT
+ADD BIO VARCHAR(40);
+
+e.g.
+
+ALTER TABLE STUDENT
+DROP COLUMN BIO;
+
+
+2. DML : Data Manipulation Language
+
+	DML Commands are used to manage database records such as , Adding new records, updating records, deleting records and fetching records.
+
+A. INSET : Inserts a new records in the table.
+
+Syntax : 
+
+INSERT INTO <TABLE-NAME>
+VALUES(value1, value2,valueN);
+
+or
+
+INSERT INTO <TABLE-NAME>
+(column1,column2,columnN)
+VALUES(value1,value2,valueN);
+
+B. SELECT : Displays the table data.
+
+Syntax : 
+
+SELECT column1,column2,column3 FROM <table-name>
+[WHERE <condition>]
+[ORDER BY <column> ASC|DESC]
+
+
+e.g.
+
+SELECT id,name,course,fees from STUDENT;
+
+//or 
+
+SELECT * from STUDENT;
+
+C. DELETE : Deletes table records.
+
+Syntax : 
+
+DELETE FROM <table-name>
+[WHERE <condition>]
+
+e.g.
+
+DELETE FROM STUDENT;
+
+e.g.
+
+DELETE FROM STUDENT
+WHERE COURSE='Python';
+
+
+D. UPDATE : Updates table records.
+
+Syntax : 
+
+UPDATE <table-name>
+SET <column-name>=<value>, <column-name>=<value>
+[WHERE <condition>]
+
+e.g.
+
+UPDATE STUDENT
+SET fees=12000
+WHERE COURSE='Python';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

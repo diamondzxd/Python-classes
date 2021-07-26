@@ -1,0 +1,124 @@
+4th Session : 
+
+Python Lists -
+
+A python list is a heterogeneous data structure i.e. A python list can store elements of any data type.
+A python list is a collection of multiple data elements.
+
+It is a dynamic data structure, elements can be added to or removed from a python list.
+
+Declaration : 
+
+lst=[]		#Creates an empty list.
+lst=[1,2,3]	#Creates a list of three elements
+lst=["Anil","Sunil","Ravi"] #Creates a list of three elements
+lst=[1,"Anil",32]	    #Creates a list of three elements of different data types.
+
+Accessing List Elements - 
+
+In Python, lists starts from index 0.
+
+lsst=[1,2,3,4,5]
+
+print(lsst[0])		#Prints 1
+print(lsst[3])		#Prints 4
+
+
+Iterating Lists
+
+#Index Based Iteration
+
+for i in range(5):
+	print(lsst[i])
+
+
+#List Based Iteration
+for value in lst:
+	print(value)
+
+
+Ques : Write a Python program to create a list of 5 elements (constants.) Calculate sum of all of them.
+
+Inset function and input function
+
+lst=[]
+for i in range(5):
+	v=int(input("Enter Number "))
+	lst.inset(i,v)
+---------------------------------------------------------
+
+lst=[]
+for i in range(5):
+	v=int(input("Enter Number "))
+	lst.append(v)
+
+print("Array Elements Are")
+for i in range(5):
+	print(lst[i])
+
+Ques 2 : Write a program to accept n elements from a user. Display the largest element entered by the user in the array.
+
+
+
+-----------Array Functions----------
+
+1. insert(index,value) : Inserts value at index.
+
+e.g.
+
+lst.insert(3,10)
+
+2. append(value) : Adds a value at the end.
+
+e.g.
+
+lst.append(5)
+
+3.
+
+lst.index(value,start=0,stop=9999999) : Searches for value between start and stop and returns the index of the element if it is found.
+Returns error otherwise.
+
+e.g.
+
+lst.index(99,0,5)
+lst.index(99)
+lst.index(99,5)
+lst.index(99,stop=10)
+
+4. remove(value) : Removes the first occurence of value. Raises value ValueError if the value is not present.
+
+e.g.
+
+lst.remove(99)
+
+
+
+5. pop(index=-1) : Removes and returns an item at index. Raises error if list is empty or index is out of range.
+
+
+e.g.
+
+lst.pop(5)
+lst.pop		#Removes last element from the array
+
+6. count(value) : Counts the number of occurences of value.
+
+e.g.
+
+lst.count("Anil")
+
+7. clear() : Remove all elements from the list
+
+e.g. 
+
+8. sort(reverse=False) : Sort elements in ascending order.
+
+e.g.
+
+lst.sort()
+
+
+
+
+

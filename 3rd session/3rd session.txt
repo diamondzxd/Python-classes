@@ -1,0 +1,60 @@
+Write Python programs to solve the following : 
+
+1. 1+2+3+4+5
+2. 1+2+3+...+N
+3. M +(M+1)+(M+2)+..+(N)
+4. 1/1+1/2+1/3+..+1/N
+5. 1/2 + 2/3 + 3/4 + .. + (N-1)/N
+
+Ques 4 : 
+for i in range(1,n+1,1):
+    sum=sum+1/i
+
+
+
+6. 1*2*3*4*...*N (Factorial)
+7. M*M*M*M*..N Times (Power)
+
+-------------------------------
+
+While Loop : 
+
+initialization
+while condition:
+	statements
+	updation
+
+
+for : No. of iterations known/counter controlled loop/linear
+while : No. of iterations are unknown/sentinel controlled loop/non-linear
+
+Write a program to find the number of digits in a number
+
+INput : 65535
+out : 5
+
+Program Done.
+
+Question : Write a Program to find the largest digit of a number.
+
+To work around a single digit use the modulo function %
+
+like d=n%10 ( it will return the digit itself)
+
+Program Done.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

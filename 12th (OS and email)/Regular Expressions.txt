@@ -1,0 +1,35 @@
+Regular Expressions
+
+Regular Expressuis are alphanumeric sequences which are used to find a specific pattern or format in the specified string.
+
+#import re
+
+MSG="Dear Customer. Your OTP Number for Txn is 583049. OTP will remain valid for 15 minutes."
+
+pattern=re.compile('[0-9][0-9][0-9][0-9][0-9][0-9]')
+pattern.findall(MSG)
+
+[abc] : Either a, b or c
+[a-c] : Same as above in example
+[a-z] : Any small aplhabets
+[A-Z] : ANY capital aplhabet
+[A-Za-z] : Any alphabet
+[a-zA-Z0-9] : Any alphanumeric value
+[^0-9] : Not a Digit
+
+Credit Card Number : 
+[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]
+
+Quantifiers
+
+{m} : Exactly m Occurences		e.g. [0-9]{m}	#For OTP
+
+{m,n} : Minimum m occurences and maximum n occurences
+
+{,n} : Maximum n occurences
+
+{m,} : Minimum m occurences
+
+* : Zero or more occurences
+
++ : One or more occurences

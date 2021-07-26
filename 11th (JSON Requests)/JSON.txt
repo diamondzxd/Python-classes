@@ -1,0 +1,14 @@
+JSON : Data Interchange Format
+
+JSON Data Structures
+
+1. Array		#Like a Python list
+
+['1','2','3','4','5']\
+
+2. Object		#Like a Python Dictionary
+
+{
+	'name':'Piyush'
+	'age':'18'
+}

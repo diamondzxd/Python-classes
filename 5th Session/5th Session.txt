@@ -1,0 +1,170 @@
+Functions in Python : 
+
+def sum(a,b):
+	c=a+b
+	return c
+
+-----function returning multiple values----------
+
+def fun():
+	return 5, 10, 15, 20
+z
+a,b,c,d=fun()
+print(a)	#5
+print(b)	
+print(c)
+print(d)
+
+
+---------------------
+
+Optional Paremeter Functios
+
+def Sum(a,b):
+	c=a+b
+	return c
+
+Sum(5,10)
+Sum()		#error
+
+
+def Sum(a,b,c=0,d=0,e=0):
+	res=a+b+c+d+e
+	return c
+
+Note : Optional parameter can be defined by assigning a default value to it. Optional parameters can be declared from right to left only.
+
+Sum(5,10)
+Sum(5,10,15)
+Sum(5,10,15,20,25)
+
+
+----example---
+
+def Registration(name, gender,age,email=None,phone=None):
+
+	...
+
+
+Registration('piyush','Male',18)
+Registration('piyush','Male',18,'dhall.piyush@gmail.com')
+Registration('piyush','Male',18,'dhall.piyush@gmail.com',98493845938)
+
+
+***Named Arguments***
+
+In Python, function parameters can be assigned in arbitrary order by specifying the name of the parameter.
+
+E.g.
+
+Registration('Piyush','Male',18,'email@email.com',phone=999999999)	
+
+(Here, #name,gender,age : Positional Arguments, #phone : Named Arguments)
+
+Note : Named argumentes can be used anywhere in function call. Positional arguments cannot be assigned after a named argument.
+
+
+e.g.
+
+
+Registration(email='asdf@asdf.com',name='Piyush',age=18,gender='Male')	#OK
+Registration('Piyush','Male',18,'asdf@adsf.com)				#OK
+Registration('Piyush','Male',email='asdf@asdf.com',32)			#Invalid
+
+
+
+Function Overloading
+
+
+Defining a function more than once in a program is called function Overloading.
+In function overloading, the number of parameters declared to a function must be different.
+
+def Registration(name,gender,age):
+	...
+
+
+def Registration(name,gender,age,email):
+	...
+
+
+
+
+def Registration(name,gender,age,phone): 	#Incorrect
+
+
+
+
+-----Variable Argument Functions------- (its like sum function in excel, there could be any no. of arguments)
+
+def Sum(*value):
+	s=0
+	for v in value:
+		s=s+v
+	return s
+
+
+
+
+
+
+------Examples
+
+Sum()
+Sum(1)
+Sum(1,2)
+Sum(1,2,3)
+Sum(1,3,2,1,2,3,2,1,2,859,3,1,2,3,2,1,2,3,2,1,2,3,2,1,2,3)
+
+It will make all the arguments and encapsulate it into a list data type.
+
+
+
+
+
+enter user profile 
+
+
+3 parameters
+
+name, email, skills=any no. of skills
+
+
+-------Packages and Modules---------------
+
+
+A module is a python file. Python modules are ususally defined to contain some reusable resources such as function or classes etc.
+
+
+A Package is a python directory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

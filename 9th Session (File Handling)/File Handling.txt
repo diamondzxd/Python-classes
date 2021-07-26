@@ -1,0 +1,79 @@
+File Handling in Python
+
+1. open(name,mode): Creates or opens a file with the specified name.
+
+File Modes
+
+Unidirectional streams
+
+A. w : Write Only Modes		//If file doesnot exist a new file will be crated, if file exists its Previous data will be erased. If file cannot be created an exception will be reaised.
+B. r : Read Only Modes		//If File does not exist, an exception will be raised. If file exists it will be opened in read mode and read cursor will be positioned at the beginning of the file. If file cannot be opened an exception will be raised.
+C. a : Append Only Modes	//If file does not exist, a new file will be created. If file exist it will be opened in write mode and write cursor will be positioned at the end of the file. If the file cannot be created, an exception will be raised.
+
+Bi-directional streams
+
+D. w+ : Write and Read		//
+E. r+ : Read and Write
+F. a+ : Append and Read
+
+Binary streams
+
+wb, rb, ab, wb+, rb+, a+
+
+e.g.
+
+f=open("myfile.txt","w")
+
+2. close() : Closes an already opened stream.
+
+e.g.
+
+f.close()
+
+3. write(str) : Write str to file.
+
+e.g.
+
+f.write("Hello World")
+f.write("Another Statement")
+
+4. read(n=99999999999) : Reads n characters from the file. If n is ommitted then the enetire file will be read.
+
+e.g.
+
+data=f.read(5)		#Reads 5 Characters
+data=f.read()		#Reads All Characters
+
+5. writelines() : Writes a list of strings to file.
+
+e.g.
+
+contacts=['Anil','Sunil','Sanjay']
+f.writelines(contacts)
+
+6. readlines(n) : Reads n lines from the file and returns a list of strings, where each string parameter will represent a line in the file.
+
+e.g.
+
+data=f.readlines(1)		#Reads first 1 lines
+
+
+7. seek(offset,whence) : Moves the file cursor.
+
+Whence : 
+
+0 : Beginning of the File
+1 : Currrent Position
+2 : End of the File
+
+e.g.
+
+f.seek(0,2)
+f.seek(-10,2)
+f.seek(50,1)
+
+8. tell() : Tells the position of the cursor in the file.
+
+e.g.
+
+f.tell()

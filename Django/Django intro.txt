@@ -1,0 +1,56 @@
+Django
+
+Django is a web development framework that assists in building and maintaining quality web applications.
+
+Basic Informatiom in GitHub.
+
+Installing Django..
+
+pip install django
+
+Creating Django Projects
+
+>>> django-admin startproject <project-name>
+
+e.g.
+
+> django-admin startproject dsite
+
+Running Django Project
+
+> python manage.py runserver
+
+To create an app.
+
+> django-admin startapp <app-name>
+
+> python manage.py startapp <app-name>
+
+
+Registering Apps
+
+settings.py 
+
+INSTALLED_APPS=[
+	'main',
+	....
+]
+
+
+Writing Views (in views.py)
+
+from django.http import HttpResponse
+
+def Index(request):
+	return HttpResponse("Hello World")
+
+render (to render a template directly)
+
+redirect - to redirect the request it to another URL
+
+
+urls.py
+
+from main import views
+
+path('/', views.Index)

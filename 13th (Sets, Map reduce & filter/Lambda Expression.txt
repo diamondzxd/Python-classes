@@ -1,0 +1,110 @@
+Map Function : 
+
+map(function,list) : Applies the specified on every single element on the list.
+
+Example : 
+
+To apply 18% deduction on every single element of a list.
+
+lst=[54,76,45,23,2,5,3,2,3225,2345]
+#Method 1:
+
+for i in range(len(lst)):
+	lst[i]=lst[i]*0.82
+
+#Method 2 : 
+
+def Update(val):
+	return val*0.82
+
+	for i in range(len(lst)):
+		lst[i]=Update(lst[i])
+
+#Method 3 : 
+
+def Update(val):
+	return val*0.82
+
+map(Update,list)
+
+-------------------------------------------------------------------------------------------------------
+
+Lambda Expression or Anonymous function
+
+Used to perform petty tasks 
+
+Syntax : lambda (parameters) : <function-statement>
+
+e.g. 
+
+def Sum(a,b):
+	return a+b
+
+Equivalent to :
+
+lambda (a,b) : a+b
+
+Q. Write a lambda function to check whether a number is even or odd.
+
+def Check(a):
+	if (a%2==0):
+		return True
+	else:
+		return False
+
+or
+
+#We use shorthand in if-else for lamba function
+
+lambda (a) : True if(a%2==0) else False
+
+map reduce filter functions
+
+
+Lamba expressions should be used when you have to pass a function as the parameter to another function. It shouldn't be used for basic tasks.
+
+
+Map function : 
+
+map(function, list) : Applies function to all elements of a list.
+
+E.g.
+
+#To Increment the values by 5.
+
+lst=[123,31,2,2,4,1,24,1,24,12,34,1,234]
+lst=list(map(lambda x:x+5, lst))
+
+Q. Write map definition to increment even numbers by 1 and decrement oddno.s by 1.
+
+lst=[123,31,2,2,4,1,24,1,24,12,34,1,234]
+
+lst=list(map(lambda x:x+1 if(x%2==0) else x-1, lst))
+
+--------------------------------------------------------------------------------------------------
+
+Filter Function
+
+filter(finction, list) : Applies a function to all elements of a list and return only those elements for which the specified critirea satisfies.
+
+Syntax : 
+
+filter(function, list)
+
+e.g. : 
+
+Write filter function to return all elements greater than 500 and lesser than 1000.
+
+lst=[547,4095,331,5351,35,3,6,2,353,234234,235]
+lst=list(filter(lambda x:x>500 and x<=1000,lst))
+
+
+Multiple inputs in single line & splitting them.
+
+a=input("Enter 5 numbers")
+
+a=list(map(int, a.split(' ')))
+
+-----------------------------------------------------------------------------------------------------
+
+Reduce function : Returns a single scalar value.

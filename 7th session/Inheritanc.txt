@@ -1,0 +1,95 @@
+Constructors in Python
+
+
+
+
+
+Inheritance
+
+Inheritance is a process of defining new data types on the basis of Existing Ones.
+
+Base/Super/Parent-	existing predefined classes
+
+Derive/Sub/child- new class
+
+Types of Inheritance
+
+1. Simple Inheritance (P->C)		// Parent to Child
+2. Multi-level Inheritance (GP -> P -> C)		Grand Parent to Parent to child
+3. Multiple Ineritance (P1+P2) -> C)
+4. Hierarchial Inheritance (P -> C1, C2, C3)
+5. Hybrid Inheritance (Multiple + Multilevel)
+
+
+
+Declaration : 
+
+class Child(Base, [Base,Base]):
+	<members>
+
+
+
+
+e.g
+
+class Base:
+	def Fun():
+		print("Hello World)
+
+class Derive(Base):
+	def AnotherFun():
+		print("Bye World")
+
+
+obj=Derive()
+obj.Fun()
+obj.(AnotherFun)
+
+
+
+-----------------------------------
+
+e.g.
+
+
+class Bank:
+	acno=0
+	name=''
+	branch=''
+	balance=0.0
+
+
+	def Input(self):
+		acno=Input("Enter Account Number")
+		...
+		...
+		...
+		...
+
+	def Output(self):
+		print("Account Number : ", acno)
+		...
+		...
+		...
+
+	def Fun(self)		#another arbitrary function
+		...
+
+class BankV1(Bank):
+	aadhar=0
+
+	def Input(self)		#Overriding
+		Bank::Input(self)
+		aadhar=input("Enter Aadhar Number : ")
+
+	def Output(self):
+		Bank::Output(self)	#Overriding
+		print(aadhar)
+
+
+
+c=BankV1()
+c.Input()
+c.Output()
+
+
